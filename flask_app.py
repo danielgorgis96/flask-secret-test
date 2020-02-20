@@ -17,8 +17,8 @@ def Menu_func():
     #encoded = base64.b64encode(b'data to be encoded')
     #print(encoded)
 
-    decoded = base64.b64decode(PASS_TO_APP)
-    login = decoded.decode("utf-8")
+    #decoded = base64.b64decode(PASS_TO_APP)
+    #login = decoded.decode("utf-8")
 
 
     return render_template('Frontpage.html' ,decoded_value = PASS_TO_APP)
