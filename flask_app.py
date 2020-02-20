@@ -23,7 +23,7 @@ def Menu_func():
     login = decoded.decode("utf-8")
 
 
-    return render_template('Frontpage.html' ,decoded_value = login)
+    return render_template('Frontpage.html' ,decoded_value = login,decoded_base = decoded, decoded_raw = PASS_TO_APP)
 
 
 if __name__ == "__main__":
