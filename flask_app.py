@@ -18,12 +18,10 @@ def Menu_func():
     #print(encoded)
 
     decoded = base64.b64decode(PASS_TO_APP)
-    print(decoded.decode("utf-8"))
-
     login = decoded.decode("utf-8")
 
 
-    return render_template('Frontpage.html' ,decoded_value = login,decoded_base = decoded, decoded_raw = PASS_TO_APP)
+    return render_template('Frontpage.html' ,decoded_value = PASS_TO_APP)
 
 
 if __name__ == "__main__":
