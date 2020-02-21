@@ -13,6 +13,8 @@ app = Flask(__name__,static_folder="static", template_folder="templates")
 def Menu_func():
 
     PASS_TO_APP = os.environ['PASS_TO_APP'] 
+    SECRET_ID = os.environ['AWS_TOKEN'] 
+    AWS_TOKEN = os.environ['SECRET_ID'] 
     
     #encoded = base64.b64encode(b'data to be encoded')
     #print(encoded)
@@ -21,7 +23,7 @@ def Menu_func():
     #login = decoded.decode("utf-8")
 
 
-    return render_template('Frontpage.html' ,decoded_value = PASS_TO_APP)
+    return render_template('Frontpage.html' ,decoded_value = PASS_TO_APP,tokenaws = AWS_TOKEN, secretid = SECRET_ID)
 
 
 if __name__ == "__main__":
